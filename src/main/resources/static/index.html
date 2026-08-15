@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FlatTire</title>
+
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="header-content">
+        <div class="brand">FlatTire</div>
+
+        <div class="tagline">
+            Java dependency intelligence
+        </div>
+    </div>
+</header>
+
+
+<main class="container">
+
+    <section class="hero">
+
+        <h1>Know your dependency before you ship it.</h1>
+
+        <p>
+            Search Maven Central, explore available versions,
+            and eventually see known security vulnerabilities.
+        </p>
+
+        <div class="search-container">
+
+            <input
+                    id="searchInput"
+                    type="text"
+                    placeholder="Search Maven dependencies..."
+                    autocomplete="off"
+            >
+
+            <button
+                    id="searchButton"
+                    type="button">
+                Search
+            </button>
+
+        </div>
+
+        <div id="status" class="status"></div>
+
+    </section>
+
+
+    <section
+            id="searchSection"
+            class="results-section hidden">
+
+        <div class="section-header">
+            <h2>Search Results</h2>
+        </div>
+
+        <div id="searchResults"></div>
+
+    </section>
+
+
+    <section
+            id="versionSection"
+            class="versions-section hidden">
+
+        <div class="section-header">
+
+            <div>
+                <div class="section-label">
+                    Dependency
+                </div>
+
+                <h2 id="selectedArtifact"></h2>
+
+                <div
+                        id="versionCount"
+                        class="version-count">
+                </div>
+            </div>
+
+        </div>
+
+        <div
+                id="versionResults"
+                class="version-grid">
+        </div>
+
+        <button
+                id="showAllButton"
+                class="secondary-button hidden"
+                type="button">
+            Show all versions
+        </button>
+
+    </section>
+
+</main>
+
+
+<script src="/js/dependency-search.js"></script>
+
+</body>
+
+</html>

@@ -14,7 +14,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/flattire/api")
 @RequiredArgsConstructor
-public class MavenSearchController {
+public class MavenCentralController {
 
     private final MavenCentralService mavenCentralService;
 
