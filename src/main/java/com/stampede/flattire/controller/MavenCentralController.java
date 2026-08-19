@@ -18,11 +18,13 @@ public class MavenCentralController {
 
     private final MavenCentralService mavenCentralService;
 
+    //http://localhost:8080/flattire/api/search?query=postgresql
     @GetMapping("/search")
     public List<MavenSearchResult> search(@RequestParam String query) {
         return mavenCentralService.search(query);
     }
 
+    //http://localhost:8080/flattire/api/versions?groupId=org.postgresql&artifactId=postgresql
     @GetMapping("/versions")
     public List<MavenVersionResult> versions(
             @RequestParam String groupId,
